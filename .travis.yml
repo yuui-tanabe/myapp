@@ -1,0 +1,12 @@
+language: cpp
+dist: xenial
+addons:
+  sonarcloud:
+    organization: "yuui-tanabe-github"
+  apt:
+    packages:
+      - libspdlog-dev
+script:
+  - cmake -G"Unix Makefiles" -DCMAKE_CXX_FLAGS="--std=c++11".
+  - build-wrapper-linux-x86-64 --out-dir bw_output make clean all
+  - sonar-scanner

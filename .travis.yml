@@ -1,12 +1,13 @@
 language: cpp
-dist: xenial
-addons:
-  sonarcloud:
-    organization: "yuui-tanabe-github"
-  apt:
-    packages:
-      - libspdlog-dev
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+    - os: osx
+      osx_image: xcode10.1
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install graphviz; fi
 script:
-  - cmake -G"Unix Makefiles" -DCMAKE_CXX_FLAGS="--std=c++11".
-  - build-wrapper-linux-x86-64 --out-dir bw_output make clean all
-  - sonar-scanner
+  - cmake -G"Unix Makefiles" .
+  - make

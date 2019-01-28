@@ -9,12 +9,12 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Dependencies
-        command: |
-         pacman -Syyu --noconfirm --noprogressbar
-         pacman -Sy base-devel git cmake
+          name: Install Dependencies
+          command: |
+           pacman -Syyu --noconfirm --noprogressbar --needed
+           pacman -Sy base-devel git cmake --noconfirm --noprogressbar --needed
       - run:
           name: CI Build
           command: |
-            cmake -G"Unix Makefiles"
+            cmake -G"Unix Makefiles" .
             make -j $(nproc)

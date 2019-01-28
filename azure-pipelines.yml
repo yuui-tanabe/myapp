@@ -1,7 +1,7 @@
-jobs:
-  - job: CI-Build
-    steps:
-      - script: |
-        cmake -G"Visual Studio 15" .
-        displayName: CI Build
-      - task: CMake@1
+pool:
+ vmImage: 'vs2017-win2016'
+steps:
+- task: CMake@1
+  inputs:
+    workingDirectory: .
+    cmakeArgs: -G"Visual Studio 15" 

@@ -5,4 +5,6 @@ steps:
   inputs:
     workingDirectory: .
     cmakeArgs: -G"Visual Studio 15" 
-- script: msbuild
+- task: MSBuild@1
+  inputs:
+    solution: ./*.sln

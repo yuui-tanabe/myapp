@@ -1,0 +1,7 @@
+jobs:
+  - job: CI-Build
+    steps:
+      - script: |
+        cmake -G"Visual Studio 15" .
+        displayName: CI Build
+      - task: CMake@1

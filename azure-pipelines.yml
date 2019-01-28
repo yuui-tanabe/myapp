@@ -2,3 +2,6 @@ pool:
  vmImage: 'vs2017-win2016'
 steps:
 - task: CMake@1
+  inputs:
+    workingDirectory: 'build'
+    cmakeArgs: -G"Visual Studio 15" 

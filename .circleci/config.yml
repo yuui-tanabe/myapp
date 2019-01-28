@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: archlinux/base
+    branches:
+        only:
+          - master
+    steps:
+      - checkout
+      - run:
+        name: Install Dependencies
+        command: |
+         pacman -Syyu --noconfirm --noprogressbar
+         pacman -Sy base-devel git cmake
+      - run:
+          name: CI Build
+          command: |
+            cmake -G"Unix Makefiles"
+            make -j $(nproc)

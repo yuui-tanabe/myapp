@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Dependencies
-        command: |
+          name: Install Dependencies
+          command: |
            pacman -Syyu --noconfirm --noprogressbar
            pacman -Sy base-devel git cmake
       - run:

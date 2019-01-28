@@ -5,3 +5,4 @@ steps:
     cmake -G"Visual Studio 15" .
     msbuild
   displayName: "CI-Build"
+- task: CMake@1

@@ -1,5 +1,5 @@
 pool:
- vmImage: 'win1803'
+ vmImage: 'win1803-vs2017'
 steps:
 - script: |
     cmake -G"Visual Studio 15" .

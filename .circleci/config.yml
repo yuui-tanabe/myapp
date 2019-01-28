@@ -16,5 +16,5 @@ jobs:
       - run:
           name: CI Build
           command: |
-            cmake -G"Unix Makefiles"
+            cmake -G"Unix Makefiles" .
             make -j $(nproc)

@@ -3,8 +3,8 @@ pool:
 steps:
 - task: CMake@1
   inputs:
-    workingDirectory: .
-    cmakeArgs: -G"Visual Studio 15" 
+    workingDirectory: . 
+    cmakeArgs: -G'Visual Studio 15'
 - task: MSBuild@1
   inputs:
     solution: ./*.sln

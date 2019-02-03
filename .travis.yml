@@ -2,7 +2,7 @@ language: cpp
 os: osx
 branches:
   only:
-  - master
+  - staging
 osx_image: xcode10.1
 script:
   - cmake -G"Unix Makefiles" .

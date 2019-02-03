@@ -5,7 +5,7 @@ jobs:
       - image: archlinux/base
     branches:
         only:
-          - master
+          - staging
     steps:
       - checkout
       - run:

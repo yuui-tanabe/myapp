@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(helloworld)
+project(myapp)
 enable_language(CXX)
 
 add_executable(helloworld src/helloworld.cpp)

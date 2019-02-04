@@ -7,12 +7,12 @@ jobs:
         only:
           - staging
     steps:
-      - checkout
       - run:
           name: Install Dependencies
           command: |
            pacman -Syyu --noconfirm --noprogressbar --needed
            pacman -Sy base-devel git cmake --noconfirm --noprogressbar --needed
+      - checkout
       - run:
           name: CI Build
           command: |

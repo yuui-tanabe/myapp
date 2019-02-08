@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES
 #include "Squares.hpp"
 
 using namespace std;
@@ -12,7 +13,7 @@ int Bretschneider(int w,int x,int y,int z,int angle1,int angle2) {
         Brahmagupta(w,x,y,z);
     }
     else {
-        float radians =  (angle1+angle2)*(pi/180);
+        float radians =  (angle1+angle2)*(M_PI/180);
         int square2 = sqrt((s-w)*(s-x)*(s-y)*(s-z)-w*x*y*z*cos(radians));
         cout << square2 << endl;
 }

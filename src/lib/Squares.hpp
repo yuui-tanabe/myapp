@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 
 namespace Quadruple {
     int Brahmagupta(int a,int b,int c,int d);

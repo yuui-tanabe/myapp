@@ -12,9 +12,10 @@ int Bretschneider(int w,int x,int y,int z,int angle1,int angle2) {
     int s = (w+x+y+z)/2;
     if ((angle1+angle2) == 180) {
         Brahmagupta(w,x,y,z);
-    }
-    else {
+    } else {
         float radians =  (angle1+angle2)*(M_PI/180);
         int square2 = sqrt((s-w)*(s-x)*(s-y)*(s-z)-w*x*y*z*cos(radians));
         cout << square2 << endl;
+        }
+    }
 }

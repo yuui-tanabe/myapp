@@ -4,4 +4,5 @@ project(myapp)
 enable_language(CXX)
 
 add_executable(helloworld src/helloworld.cpp)
-add_library(square src/lib/*)
+add_library(square src/lib/Square.hpp
+                   src/lib/Square.cpp)

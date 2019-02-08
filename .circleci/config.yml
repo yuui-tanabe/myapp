@@ -18,3 +18,4 @@ jobs:
           command: |
             cmake -G"Unix Makefiles" .
             make -j $(nproc)
+            find -name libsquare.a

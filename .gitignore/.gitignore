@@ -1,4 +1,6 @@
 # Object Files
 *.o
+*.a
+*.lib
 # CI File
 *.yml

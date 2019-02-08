@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cmath>
 
 namespace Triangle {
     int Brahmagupta(int a,int b,int c,int d);
